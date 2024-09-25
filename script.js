@@ -59,7 +59,7 @@ function alterarContexto(contexto) {
     botoes.forEach(contexto => contexto.classList.remove('active'));
 
     html.setAttribute('data-contexto', contexto);
-    banner.src = `./imagens/${contexto}.png`;
+    banner.src = `/imagens/${contexto}.png`;
 
     switch (contexto) {
         case 'foco':
@@ -109,14 +109,14 @@ function iniciarOuPausar() {
     audioPlay.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
     iniciarOuPausarBt.textContent = 'Pausar';
-    iniciarOuPausarImg.src = './imagens/pause.png';
+    iniciarOuPausarImg.src = '/imagens/pause.png';
 
 }
 
 function zerar() {
     clearInterval(intervaloId);
     iniciarOuPausarBt.textContent = 'Começar';
-    iniciarOuPausarImg.src = './imagens/play_arrow.png';
+    iniciarOuPausarImg.src = '/imagens/play_arrow.png';
     intervaloId = null;
 }
 
